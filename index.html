@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="calculator">
+      <section class="display">
+        <span class="calculator-title">Calculator</span>
+        <button class="history-button">
+          <i class="history-icon"></i>
+        </button>
+        <div class="display" id="display">0</div>
+      </section>
+      <section class="buttons">
+        <div class="memory-buttons-container">
+          <button class="btn memory-buttons" onclick="memoryClear()">MC</button>
+          <button class="btn memory-buttons" onclick="memoryRecall()">
+            MR
+          </button>
+          <button class="btn memory-buttons" onclick="memoryAdd()">M+</button>
+          <button class="btn memory-buttons" onclick="memorySubtract()">
+            M-
+          </button>
+          <button class="btn memory-buttons" onclick="memoryStore()">MS</button>
+          <button class="btn memory-buttons" onclick="memoryMultiply()">
+            M^
+          </button>
+        </div>
+      </section>
+
+      <section class="buttons">
+        <button class="btn operators-buttons" onclick="appendOperators('%')">
+          %
+        </button>
+        <button class="btn operators-buttons" onclick="appendOperators('√')">
+          √
+        </button>
+        <button class="btn operators-buttons" onclick="appendoperators('x²')">
+          x²
+        </button>
+        <button class="btn operators-buttons" onclick="appendOperators('1/x')">
+          1/x
+        </button>
+      </section>
+
+      <section class="buttons">
+        <button class="btn clear-buttons" onclick="clearAllDisplay('CE')">
+          CE
+        </button>
+        <button class="btn clear-buttons" onclick="clearDisplay('C')">C</button>
+        <button class="btn delete-buttons" onclick="deleteDigit('←')">←</button>
+        <button class="btn operator-buttons" onclick="appendOperator('÷')">
+          ÷
+        </button>
+        <button class="btn" onclick="appendNumber('7')">7</button>
+        <button class="btn" onclick="appendNumber('8')">8</button>
+        <button class="btn" onclick="appendNumber('9')">9</button>
+        <button class="btn operator-buttons" onclick="appendOperator('×')">
+          ×
+        </button>
+        <button class="btn" onclick="appendNumber('4')">4</button>
+        <button class="btn" onclick="appendNumber('5')">5</button>
+        <button class="btn" onclick="appendNumber('6')">6</button>
+        <button class="btn operator-buttons" onclick="appendOperator('-')">
+          -
+        </button>
+        <button class="btn" onclick="appendNumber('1')">1</button>
+        <button class="btn" onclick="appendNumber('2')">2</button>
+        <button class="btn" onclick="appendNumber('3')">3</button>
+        <button class="btn operator-buttons" onclick="appendOperator('+')">
+          +
+        </button>
+        <button class="btn sign-button" onclick="appendSign('±')">±</button>
+        <button class="btn" onclick="appendNumber('0')">0</button>
+        <button class="btn decimal-button" onclick="appendDecimal('.')">
+          .
+        </button>
+        <button class="btn equals-button" onclick="calculateResult()">=</button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f4f4;
+}
+
+.calculator {
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #2b2b2b;
+}
+
+.history-button {
+  /* ... other styles ... */
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  background-color: #202020; /* Make the button background transparent */
+  border: none; /* Remove button border */
+}
+
+.history-icon {
+  display: block; /* Make the icon block-level to fill the button */
+  width: 100%; /* Make the icon fill the entire width of the button */
+  height: 100%; /* Make the icon fill the entire height of the button */
+  background-image: url("./Image/History\ Icon.jpg"); /* Replace with the actual path to your SVG icon */
+  background-color: #202020;
+  background-size: contain; /* Scale the icon to fit within the button without stretching */
+  background-repeat: no-repeat;
+  background-position: center; /* Center the icon within the button */
+}
+
+.display {
+  flex: 1;
+  background-color: #202020;
+  color: white;
+  padding: 15px;
+  text-align: right;
+  font-size: 3rem;
+  border-radius: 10px;
+  margin-bottom: 2px;
+  visibility: visible; /* Ensure visibility */
+  opacity: 1; /* Ensure opacity */
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+  padding: 2px;
+}
+
+.btn {
+  padding: 8px;
+  font-size: 18px;
+  background-color: #080808;
+  color: white;
+  border: none;
+  border-radius: 2.5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #4b4b4b;
+}
+
+.btn:active {
+  background-color: #181414;
+}
+
+button[style] {
+  grid-column: span 2;
+}
+
+.calculator-title {
+  position: absolute;
+  left: 425px; /* Adjust right position as needed */
+  top: 95px;
+  font-size: 14px; /* Adjust font size as needed */
+  color: #fff; /* Adjust text color as needed */
+}
+
+.memory-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: space-between; /* Distribute with space between */
+  width: 100%;
+}
+
+.memory-buttons {
+  padding: 2px 26.7px;
+  margin: 0px 1.5px;
+  font-size: 18px;
+  background-color: #2b2b2b;
+  color: white;
+  border: none;
+  border-radius: 2.5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clear-buttons {
+  background-color: #ff0000;
+  font-weight: 100; /* A lighter font weight */
+  font-size: 18px; /* Smaller font size */
+}
+
+.delete-buttons {
+  background-color: #202020; /* Replace with your desired color */
+  font-size: 18px; /* Smaller font size */
+}
+
+.operator-buttons {
+  /* ... other styles for operator buttons ... */
+  padding: 10px; /* Adjust padding for spacing between buttons */
+  background-color: #202020; /* Replace with your desired color */
+  font-weight: 100; /* A lighter font weight */
+  font-style: italic; /* Italic style for a softer look */
+  font-size: 18px; /* Smaller font size */
+}
+
+.operator-buttons:hover {
+  background-color: #3451f7; /* Adjust the color as desired */
+}
+
+.operators-buttons {
+  /* ... other styles for operator buttons ... */
+  padding: 8px; /* Adjust padding for spacing between buttons */
+  background-color: #202020; /* Replace with your desired color */
+  font-weight: 100; /* A lighter font weight */
+  font-style: italic; /* Italic style for a softer look */
+  font-size: 18px; /* Smaller font size */
+}
+
+.operators-buttons:hover {
+  background-color: #4b4b4b; /* Adjust the color as desired */
+}
+
+.sign-button {
+  background-color: #202020;
+}
+
+.equals-button {
+  background-color: #15ff00;
+}
+
+.equals-button:hover {
+  background-color: #7388ff;
+}
+
+/* Base styles */
+.calculator {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .calculator {
+    width: 90%;
+  }
+  .calculator .buttons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .calculator {
+    width: 70%;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+  .calculator {
+    width: 40%;
+  }
+  .buttons {
+    grid-template-columns: repeat(4, 1fr); /* Keep 4 columns */
+  }
+
+  .btn {
+    font-size: 24px; /* Increase button font size */
+  }
+} /* Add styles here */
